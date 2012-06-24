@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+  <head>
+    <title>My Project Tests</title>
+    <!-- QUnit -->
+    <script src="lib/qunit/qunit/qunit.js"></script>
+    <link rel="stylesheet" href="lib/qunit/qunit/qunit.css">
+    <!-- Module loaders & bootstrap -->
+    <script src="../lib/closure/library/base.js"></script>
+    <!-- Load via goog.require to get scripts in correct dependency order-->
+    <script>
+      try {
+        goog.require("myproject");
+      }
+      catch (ex) {
+        if (/^goog.require/.test(ex.message)) {
+          console.error('Run `cake watch` in order to generate dependencies');
+        }
+
+        throw ex;
+      }
+    </script>
+    <!-- Test scripts get loaded here, point to .js not .coffee -->
+    <script src="lib/main.js"></script>
+    <script src="lib/helpers.js"></script>
+  </head>
+
+  <body>
+    <h1 id="qunit-header">MyProject Unit Tests</h1>
+    <h2 id="qunit-banner"></h2>
+    <div id="qunit-testrunner-toolbar"></div>
+    <h2 id="qunit-userAgent"></h2>
+    <ol id="qunit-tests"></ol>
+    <div id="qunit-fixture"></div>
+  </body>
+</html>
