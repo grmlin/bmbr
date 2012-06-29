@@ -1,0 +1,50 @@
+<div class="games">
+    <header><strong>Available Games</strong><button class="btn btn-mini btn-inverse" title="New Game"><i class="icon-plus icon-white"></i>
+    </button></header>
+    <div class="scrollable">
+        <table class="table table-striped">
+            <tbody>
+            <tr>
+                <td><strong>Game 1</strong></td>
+                <td><span class="label" style="background-color: red;"><i class="icon-user icon-white"></i></span></td>
+                <td>
+                    <button class="btn btn-mini"><i class="icon-play"></i></button>
+                    <button class="btn btn-mini"><i class="icon-facetime-video"></i></button>
+                </td>
+            </tr>
+            <tr>
+                <td><strong>Game 2</strong></td>
+                <td><span class="label" style="background-color: red;"><i class="icon-user icon-white"></i></span></td>
+                <td>
+                    <button class="btn btn-mini"><i class="icon-play"></i></button>
+                    <button class="btn btn-mini"><i class="icon-facetime-video"></i></button>
+                </td>
+            </tr>
+            <tr>
+                <td><strong>Game 3</strong></td>
+                <td><span class="label" style="background-color: red;"><i class="icon-user icon-white"></i></span></td>
+                <td>
+                    <button class="btn btn-mini"><i class="icon-play"></i></button>
+                    <button class="btn btn-mini"><i class="icon-facetime-video"></i></button>
+                </td>
+            </tr>
+            <tr>
+                <td><strong>Game 4</strong></td>
+                <td>
+                    <span class="label" style="background-color: red;"><i class="icon-user icon-white"></i></span>
+                    <span class="label" style="background-color: green;"><i class="icon-user icon-white"></i></span>
+                    <span class="label" style="background-color: blue;"><i class="icon-user icon-white"></i></span>
+                </td>
+                <td>
+                    <button disabled class="btn btn-mini"><i class="icon-play"></i></button>
+                    <button class="btn btn-mini"><i class="icon-facetime-video"></i></button>
+                </td>
+            </tr>
+
+            </tbody>
+        </table>
+    </div>
+    <footer>
+        Good luck <span class="player-name" contenteditable="true">Player</span>
+    </footer>
+</div>
