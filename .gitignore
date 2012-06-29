@@ -1,7 +1,0 @@
-/dist/
-/.idea/
-node_modules
-build
-lib/closure
-lib/client
-*.pyc
