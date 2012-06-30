@@ -1,5 +1,6 @@
 Spine = require('spine')
 Sidebar = require('controllers/Main.Sidebar')
+Game = require('controllers/Game')
 
 class Main extends Spine.Controller
   className : 'main'
@@ -7,7 +8,7 @@ class Main extends Spine.Controller
     ".sidebar": "jqSidebar"
   constructor: ->
     super
-    @log(@el)
     @sidebar = new Sidebar({el:@jqSidebar})
+    @game = new Game()
     
 module.exports = Main

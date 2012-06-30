@@ -69,6 +69,25 @@
     text-align: right;
 }
 
+.sidebar table tr td + td span.label {
+    margin-left: 5px;
+}
+.sidebar table tr td span.user-name {
+   font-size: 10px;
+    margin-top: -3px;
+    position: absolute;
+    color: #000;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    white-space: nowrap;
+    opacity: 0;
+}
+
+.sidebar table tr td span.label:hover + span.user-name {
+    opacity: 1;
+}
+
 .sidebar .games footer {
     position: absolute;
     bottom: 0;

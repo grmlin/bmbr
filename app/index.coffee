@@ -9,6 +9,9 @@ class App extends Spine.Controller
   constructor: ->
     super
     @main = new Main({el:@jqMain})
+    @main.active()
+
+    Spine.Route.setup()
 
 module.exports = App
     

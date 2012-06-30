@@ -1,12 +1,15 @@
 <div class="games">
-    <header><strong>Available Games</strong><button class="btn btn-mini btn-inverse" title="New Game"><i class="icon-plus icon-white"></i>
-    </button></header>
+    <header><strong>Available Games</strong>
+        <button class="btn btn-mini btn-inverse" title="New Game"><i class="icon-plus icon-white"></i>
+        </button>
+    </header>
     <div class="scrollable">
         <table class="table table-striped">
             <tbody>
             <tr>
                 <td><strong>Game 1</strong></td>
-                <td><span class="label" style="background-color: red;"><i class="icon-user icon-white"></i></span></td>
+                <td><span class="label" style="background-color: red;"><i class="icon-user icon-white"></i></span><span
+                        class="user-name">Super Mario</span></td>
                 <td>
                     <button class="btn btn-mini"><i class="icon-play"></i></button>
                     <button class="btn btn-mini"><i class="icon-facetime-video"></i></button>
@@ -47,4 +50,47 @@
     <footer>
         Good luck <span class="player-name" contenteditable="true">Player</span>
     </footer>
+    <div class="modal-backdrop fade in hide"></div>
+    <div class="new-game-form-wrapper modal hide">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">×</button>
+            <h3>New Game</h3>
+        </div>
+        <div class="modal-body">
+            <form class="form-horizontal">
+                <fieldset>
+                    <legend>Fill the input fields below to create a new game</legend>
+                    <div class="control-group">
+                        <label class="control-label" for="game-public-input">Public game?</label>
+                        <div class="controls">
+                            <label class="checkbox">
+                                <input type="checkbox" name="public" id="game-public-input" checked="checked">
+                                Check, if this game is public.
+                            </label>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="game-name-input">Game Name</label>
+                        <div class="controls">
+                            <input type="text" class="input-xlarge" id="game-name-input" name="name" placeholder="A name for your game">
+                            <p class="help-block">Choose a name so friends can find you.</p>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="game-player-number-input"># of players</label>
+                        <div class="controls">
+                            <select id="game-player-number-input" name="player_number">
+                                <option selected="selected">2</option>
+                                <option>3</option>
+                                <option>4</option>
+                            </select>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <button type="submit" class="save btn btn-primary">Create Game</button>
+        </div>
+    </div>
 </div>
