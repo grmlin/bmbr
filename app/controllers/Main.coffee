@@ -9,6 +9,8 @@ class Main extends Spine.Controller
   constructor: ->
     super
     @sidebar = new Sidebar({el:@jqSidebar})
+    @sidebar.list.active()
+
     @game = new Game()
     
 module.exports = Main

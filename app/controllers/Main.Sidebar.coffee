@@ -2,8 +2,8 @@ Spine   = require('spine')
 Game    = require('models/Game')
 $       = Spine.$
 
-class Sidebar extends Spine.Controller
-  className: 'sidebar'
+class SidebarList extends Spine.Controller
+  className: 'sidebar-list games'
   events:
     'click header button':'openCreateLayer'
     'click .new-game-form-wrapper .close':'closeCreateLayer'
@@ -17,7 +17,7 @@ class Sidebar extends Spine.Controller
 
   constructor: ->
     super
-    @html require('views/sidebar')()
+    @html require('views/sidebar-list')()
 
   openCreateLayer: ->
     @createGameFormWrapper.show().prev().show()
@@ -31,5 +31,9 @@ class Sidebar extends Spine.Controller
       return alert(msg)
     @navigate('/game', game.id, 'show')
 
+
+class Sidebar extends Spine.Stack
+  controllers:
+    list: SidebarList
 
 module.exports = Sidebar
