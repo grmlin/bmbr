@@ -11,6 +11,12 @@
     padding-bottom: 0;
 }
 
+.sidebar > div {
+    display: none;
+}
+.sidebar > div.active {
+    display: block;
+}
 .sidebar header p {
     margin-bottom: 0;
 }
@@ -67,6 +73,10 @@
 .sidebar table tr th:last-of-type,
 .sidebar table tr td:last-of-type {
     text-align: right;
+}
+.sidebar table tr td .alert {
+    text-align: center;
+    margin: -8px;
 }
 
 .sidebar table tr td + td span.label {

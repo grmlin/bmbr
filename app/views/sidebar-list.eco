@@ -5,49 +5,11 @@
     <div class="scrollable">
         <table class="table table-striped">
             <tbody>
-            <tr>
-                <td><strong>Game 1</strong></td>
-                <td><span class="label" style="background-color: red;"><i class="icon-user icon-white"></i></span><span
-                        class="user-name">Super Mario</span></td>
-                <td>
-                    <button class="btn btn-mini"><i class="icon-play"></i></button>
-                    <button class="btn btn-mini"><i class="icon-facetime-video"></i></button>
-                </td>
-            </tr>
-            <tr>
-                <td><strong>Game 2</strong></td>
-                <td><span class="label" style="background-color: red;"><i class="icon-user icon-white"></i></span></td>
-                <td>
-                    <button class="btn btn-mini"><i class="icon-play"></i></button>
-                    <button class="btn btn-mini"><i class="icon-facetime-video"></i></button>
-                </td>
-            </tr>
-            <tr>
-                <td><strong>Game 3</strong></td>
-                <td><span class="label" style="background-color: red;"><i class="icon-user icon-white"></i></span></td>
-                <td>
-                    <button class="btn btn-mini"><i class="icon-play"></i></button>
-                    <button class="btn btn-mini"><i class="icon-facetime-video"></i></button>
-                </td>
-            </tr>
-            <tr>
-                <td><strong>Game 4</strong></td>
-                <td>
-                    <span class="label" style="background-color: red;"><i class="icon-user icon-white"></i></span>
-                    <span class="label" style="background-color: green;"><i class="icon-user icon-white"></i></span>
-                    <span class="label" style="background-color: blue;"><i class="icon-user icon-white"></i></span>
-                </td>
-                <td>
-                    <button disabled class="btn btn-mini"><i class="icon-play"></i></button>
-                    <button class="btn btn-mini"><i class="icon-facetime-video"></i></button>
-                </td>
-            </tr>
-
             </tbody>
         </table>
     </div>
     <footer>
-        Good luck <span class="player-name" contenteditable="true">Player</span>
+        Good luck <span class="player-name" contenteditable="true"></span>
     </footer>
     <div class="modal-backdrop fade in hide"></div>
     <div class="new-game-form-wrapper modal hide">
@@ -73,16 +35,6 @@
                         <div class="controls">
                             <input type="text" class="input-xlarge" id="game-name-input" name="name" placeholder="A name for your game">
                             <p class="help-block">Choose a name so friends can find you.</p>
-                        </div>
-                    </div>
-                    <div class="control-group">
-                        <label class="control-label" for="game-player-number-input"># of players</label>
-                        <div class="controls">
-                            <select id="game-player-number-input" name="player_number">
-                                <option selected="selected">2</option>
-                                <option>3</option>
-                                <option>4</option>
-                            </select>
                         </div>
                     </div>
                 </fieldset>
