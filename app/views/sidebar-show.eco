@@ -1,4 +1,4 @@
-<header>
+<header xmlns="http://www.w3.org/1999/html">
     <ul class="breadcrumb">
         <li>
             <a href="#/game/list">Games</a> <span class="divider">/</span>
@@ -24,15 +24,13 @@
             <% end %>
         </dl>
         <hr>
-        <dl class="dl-horizontal">
-            <dt>&nbsp;</dt>
-            <dd><button class="btn"><i class="icon-ok"></i> Join Game</button></dd>
-            <dt>&nbsp;</dt>
-            <dd><button class="btn"><i class="icon-film"></i> Watch Game</button></dd>
-            <dt>&nbsp;</dt>
-            <dd><button class="btn"><i class="icon-share"></i> Share Game</button></dd>
-            <dt>&nbsp;</dt>
-            <dd><button class="btn btn-danger"><i class="icon-trash icon-white"></i> Delete Game</button></dd>
+        <p class="game-actions">
+            <button class="btn"><i class="icon-ok"></i> <span>Join Game</span></button>
+            <button class="btn"><i   class="icon-film"></i> <span>Watch Game</span></button>
+            <button class="btn"><i class="icon-share"></i> <span>Share Game</span></button>
+        </p>
+        <p class="game-actions">
+           <button class="btn btn-danger"><i class="icon-trash icon-white"></i> Delete Game</button>
         </dl>
     </div>
 </div>
