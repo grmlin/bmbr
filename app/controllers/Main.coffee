@@ -10,6 +10,7 @@ class Main extends Spine.Controller
     ".sidebar": "jqSidebar"
   constructor: ->
     super
+
     @sidebar = new Sidebar({el:@jqSidebar})
     @sidebar.list.active()
 
@@ -19,5 +20,11 @@ class Main extends Spine.Controller
     unless Player.count() > 0
       defaultPlayer = new Player({name:"UNKNOWN"})
       defaultPlayer.save()
-    
+
+    @routes
+      "/game/list": ->
+        @sidebar.list.active()
+      "/game/:id/show": (params) ->
+        @sidebar.show.active(params)
+
 module.exports = Main

@@ -1,1 +1,39 @@
-show
+<header>
+    <ul class="breadcrumb">
+        <li>
+            <a href="#/game/list">Games</a> <span class="divider">/</span>
+        </li>
+        <li class="active"><%=@name%></li>
+    </ul>
+</header>
+<div class="scrollable">
+    <div>
+        <dl class="dl-horizontal">
+            <dt>Game Owner</dt>
+            <dd>NAME (TODO)</dd>
+        </dl>
+        <dl class="dl-horizontal">
+            <% for player in @players: %>
+            <dt>Player <%=_i + 1%></dt>
+            <dd>
+                <span class="label" style="background-color: <%= @helper.getPlayerColor(_i) %>;">
+                    <i class="icon-user icon-white"></i>
+                    NAME (TODO)
+                </span>
+            </dd>
+            <% end %>
+        </dl>
+        <hr>
+        <dl class="dl-horizontal">
+            <dt>&nbsp;</dt>
+            <dd><button class="btn"><i class="icon-ok"></i> Join Game</button></dd>
+            <dt>&nbsp;</dt>
+            <dd><button class="btn"><i class="icon-film"></i> Watch Game</button></dd>
+            <dt>&nbsp;</dt>
+            <dd><button class="btn"><i class="icon-share"></i> Share Game</button></dd>
+            <dt>&nbsp;</dt>
+            <dd><button class="btn btn-danger"><i class="icon-trash icon-white"></i> Delete Game</button></dd>
+        </dl>
+    </div>
+</div>
+

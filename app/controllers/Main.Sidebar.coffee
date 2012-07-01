@@ -1,6 +1,7 @@
 Spine   = require('spine')
 Game    = require('models/Game')
 Player  = require('models/Player')
+ListItems = require('controllers/Main.Sidebar.List.Items')
 $       = Spine.$
 
 class SidebarList extends Spine.Controller
@@ -21,15 +22,12 @@ class SidebarList extends Spine.Controller
 
   constructor: ->
     super
-    @active @render
-    Game.bind 'refresh change', @render
-    Player.bind 'refresh change', @renderPlayerName
     @html require('views/sidebar-list')()
+    listItems = new ListItems({el:@gamesTable})
+    @active ->
+    listItems.render()
 
-  render: =>
-    games = Game.all()
-    html =if games.length > 0 then require('views/sidebar-list-game')(games) else require('views/sidebar-list-nogame')()
-    @gamesTable.html html
+    Player.bind 'refresh change', @renderPlayerName
 
   renderPlayerName: =>
     @playerName.text(Player.getLocalPlayer().name)
@@ -42,20 +40,29 @@ class SidebarList extends Spine.Controller
 
   submit: (e) ->
     e.preventDefault()
+    player = Player.getLocalPlayer()
     game = Game.fromForm(@createForm)
-    game.addPlayer(Player.getLocalPlayer())
+    game.updateAttribute("creator",player.id)
+    game.addPlayer(player)
     unless game.save()
       msg = game.validate()
       return alert(msg)
 
     @closeCreateLayer()
-    #@navigate('/game', game.id, 'show')
 
 class SidebarShow extends Spine.Controller
   className: 'sidebar-show game'
   constructor: ->
     super
-    @html require('views/sidebar-show')()
+    @active @show
+
+  show: (params) ->
+    @render(params.id)
+
+  render: (id) ->
+    game = Game.find(id)
+    @html require('views/sidebar-show')(game)
+
 
 class Sidebar extends Spine.Stack
   controllers:

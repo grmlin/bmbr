@@ -2,14 +2,10 @@
     <td><strong><%=@name%></strong></td>
     <td>
         <% for player in @players: %>
-                    <span class="label" style="background-color: <%= @helper.getPlayerColor(_i) %>;">
-                        <i class="icon-user icon-white"></i>
-                    </span>
-        <span class="user-name"><%= player.name %></span>
+        <span class="label" style="background-color: <%= @helper.getPlayerColor(_i) %>;"><i class="icon-user icon-white"></i></span>
         <% end %>
     </td>
     <td>
-        <button class="btn btn-mini"><i class="icon-play"></i></button>
-        <button class="btn btn-mini"><i class="icon-facetime-video"></i></button>
+        <i class="icon-share"></i>
     </td>
 </tr>

@@ -1,6 +1,8 @@
-    <header><strong>Available Games</strong>
-        <button class="btn btn-mini btn-inverse" title="New Game"><i class="icon-plus icon-white"></i>
-        </button>
+    <header>
+        <ul class="breadcrumb">
+            <li class="active">Games</li>
+        </ul>
+        <button class="btn btn-mini btn-primary" title="New Game">+ Create Game</button>
     </header>
     <div class="scrollable">
         <table class="table table-striped">

@@ -11,15 +11,15 @@ class Game extends Spine.Model
   state: 1
 
   validate: ->
+    "An owner has to be set for a game" unless @creator
     "A game name is required" unless @name
     "Maximum #{Game.MAX_PLAYER} players are allowed in a game, not #{@players.length}" unless @players.length <= Game.MAX_PLAYER
-  addPlayer: (player) ->
-    playerData =
-      id: player.id
-      name: player.name
 
-    @updateAttribute("players", @players.concat([playerData]))
+  addPlayer: (player) ->
+    @updateAttribute("players", @players.concat([player.id]))
+
   helper:
     getPlayerColor: (index) ->
       if index >= Game.PLAYER_COLORS.length then 'red' else Game.PLAYER_COLORS[index]
+
 module.exports = Game
