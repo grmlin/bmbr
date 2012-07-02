@@ -14,7 +14,6 @@ class SidebarList extends Spine.Controller
     'click .new-game-form-wrapper .save': 'submit'
 
   elements:
-    'footer .player-name': 'playerName'
     '.new-game-form-wrapper': 'createGameFormWrapper'
     '.new-game-form-wrapper form': 'createForm'
     'input': 'search'
@@ -26,11 +25,6 @@ class SidebarList extends Spine.Controller
     listItems = new ListItems({el:@gamesTable})
     @active ->
     listItems.render()
-
-    Player.bind 'refresh change', @renderPlayerName
-
-  renderPlayerName: =>
-    @playerName.text(Player.getLocalPlayer().name)
 
   openCreateLayer: ->
     @createGameFormWrapper.fadeIn(SidebarList.CREATE_LAYER_FADE_DURATION).prev().fadeIn(SidebarList.CREATE_LAYER_FADE_DURATION)

@@ -12,7 +12,6 @@ class MainSidebarListItems extends Spine.Controller
   render: =>
     games = Game.all()
     html =if games.length > 0 then require('views/sidebar-list-game')(games) else require('views/sidebar-list-nogame')()
-    console.dir(@el)
     @html html
 
   showGame: (e) ->

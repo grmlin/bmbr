@@ -41,6 +41,7 @@
     position: relative;
     height: 100%;
     overflow: hidden;
+    z-index: 1;
 }
 
 .sidebar > div .scrollable {
@@ -150,7 +151,7 @@
     opacity: 1;
 }
 
-.sidebar > div footer {
+.sidebar > footer {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -166,16 +167,18 @@
     background: -ms-linear-gradient(top, #7d7e7d 0%, #0e0e0e 100%); /* IE10+ */
     background: linear-gradient(to bottom, #7d7e7d 0%, #0e0e0e 100%); /* W3C */
     color: #fff;
+    z-index: 2;
 }
 
-.sidebar > div footer  .player-name {
+.sidebar > footer  .player-name {
     border: 1px solid transparent;
     padding: 0 3px;
     font-weight: bold;
     text-decoration: underline;
+    white-space: nowrap;
 }
 
-.sidebar > div footer  .player-name:hover {
+.sidebar > footer  .player-name:hover {
     border-color: #ddd;
     background: #fff;
     color: #999;
