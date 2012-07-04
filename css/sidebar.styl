@@ -58,11 +58,14 @@
 .sidebar .game > div {
     padding: 19px;
 }
+.sidebar .game > div .game-actions {
+    text-align: center;
+}
 .sidebar .game > div .game-actions .btn {
     margin-bottom: 10px;
 }
 .sidebar .game > div .game-actions .btn i + span {
-    display: none;
+    display: inline;
 }
 .sidebar .game > div .game-actions .btn:hover i + span {
     display: inline;
@@ -151,6 +154,9 @@
     opacity: 1;
 }
 
+.sidebar dl dd span.status {
+    float: right;
+}
 .sidebar > footer {
     position: absolute;
     bottom: 0;
@@ -180,7 +186,10 @@
 
 .sidebar > footer  .player-name:hover {
     border-color: #ddd;
-    background: #fff;
-    color: #999;
     text-decoration: none;
+}
+.sidebar > footer  .player-name:focus {
+    border-color: #ddd;
+    background: #fff;
+    color: #000;
 }

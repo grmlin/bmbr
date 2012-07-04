@@ -1,5 +1,5 @@
 Spine = require('spine')
-Sidebar = require('controllers/Main.Sidebar')
+Sidebar = require('controllers/sidebar/Sidebar')
 SidebarFooter = require('controllers/sidebar/Footer')
 Game = require('models/Game')
 Games = require('controllers/Games')
@@ -8,7 +8,7 @@ Player = require('models/Player')
 class Main extends Spine.Controller
   className : 'main'
   elements:
-    ".sidebar": "jqSidebar"
+    ".sidebar": "sidebarEl"
     ".sidebar > footer": "sidebarFooter"
   constructor: ->
     super
@@ -18,7 +18,7 @@ class Main extends Spine.Controller
       defaultPlayer = new Player({name:"UNKNOWN"})
       defaultPlayer.save()
 
-    @sidebar = new Sidebar({el:@jqSidebar})
+    @sidebar = new Sidebar({el:@sidebarEl})
     @sidebar.list.active()
 
     @sidebarFooter = new SidebarFooter({el: @sidebarFooter})

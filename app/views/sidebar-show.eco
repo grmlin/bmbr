@@ -3,35 +3,57 @@
         <li>
             <a href="#/game/list">Games</a> <span class="divider">/</span>
         </li>
-        <li class="active"><%=@name%></li>
+        <li class="active"><%=@game.name%></li>
     </ul>
 </header>
 <div class="scrollable">
     <div>
+        <p class="game-actions">
+            <button class="btn"><i class="icon-ok"></i> <span>Join</span></button>
+            <button class="btn"><i class="icon-film"></i> <span>Watch</span></button>
+            <button class="share-game btn"><i class="icon-share"></i> <span>Share</span></button>
+            <button class="btn btn-danger"><i class="icon-trash icon-white"></i></button>
+        </p>
+        <hr>
         <dl class="dl-horizontal">
             <dt>Game Owner</dt>
-            <dd>NAME (TODO)</dd>
+            <dd><%=@owner.name%></dd>
         </dl>
         <dl class="dl-horizontal">
-            <% for player in @players: %>
+            <% for player in @game.players: %>
             <dt>Player <%=_i + 1%></dt>
             <dd>
-                <span class="label" style="background-color: <%= @helper.getPlayerColor(_i) %>;">
+                <span class="label" style="background-color: <%= @game.helper.getPlayerColor(_i) %>;">
                     <i class="icon-user icon-white"></i>
-                    NAME (TODO)
+                    <%=@helper.getPlayerName(player)%>
                 </span>
+                <span class="status badge badge-success" title="Connected :)"><i class="icon-ok icon-white"></i></span>
             </dd>
             <% end %>
         </dl>
         <hr>
         <p class="game-actions">
-            <button class="btn"><i class="icon-ok"></i> <span>Join Game</span></button>
-            <button class="btn"><i   class="icon-film"></i> <span>Watch Game</span></button>
-            <button class="btn"><i class="icon-share"></i> <span>Share Game</span></button>
+            <a class="start-game btn btn-primary btn-large" href="#">Start</a>
         </p>
-        <p class="game-actions">
-           <button class="btn btn-danger"><i class="icon-trash icon-white"></i> Delete Game</button>
-        </dl>
+    </div>
+</div>
+<div class="modal-backdrop fade in hide"></div>
+<div class="share-game-wrapper modal hide">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">×</button>
+        <h3>Share this game with your friends</h3>
+    </div>
+    <div class="modal-body">
+        <form class="form-horizontal">
+            <fieldset>
+                <div class="control-group">
+                    <label class="control-label" for="game-public-url">Game URL</label>
+                    <div class="controls">
+                        <input id="game-public-url" type="text" value="<%=@url%>">
+                    </div>
+                </div>
+            </fieldset>
+        </form>
     </div>
 </div>
 
