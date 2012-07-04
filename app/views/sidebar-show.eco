@@ -49,7 +49,7 @@
                 <div class="control-group">
                     <label class="control-label" for="game-public-url">Game URL</label>
                     <div class="controls">
-                        <input id="game-public-url" type="text" value="<%=@url%>">
+                        <input id="game-public-url" type="text">
                     </div>
                 </div>
             </fieldset>

@@ -23,13 +23,13 @@ class Show extends Spine.Controller
 
   render: () =>
     unless @currentGame is ""
+      @sharePopup = null
       game = Game.find(@currentGame)
       @log game, Player.find(game.creator)
 
       viewData =
         game: game
         owner: Player.find(game.creator)
-        url: window.location
         helper:
           getPlayerName: (playerId) ->
             Player.find(playerId).name
@@ -39,7 +39,7 @@ class Show extends Spine.Controller
   share: =>
     @sharePopup = new Popup({el:@jSharePopup}) if @sharePopup is null
     @sharePopup.open()
-    @jShareUrl.focus().select()
+    @jShareUrl.val(window.location).focus().select()
 
 
 module.exports = Show
