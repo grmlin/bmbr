@@ -48,6 +48,7 @@ class SidebarShow extends Spine.Controller
   className: 'sidebar-show game'
   constructor: ->
     super
+
     @active @show
 
   show: (params) ->
