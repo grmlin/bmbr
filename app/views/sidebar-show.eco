@@ -33,7 +33,7 @@
         </dl>
         <hr>
         <p class="game-actions">
-            <a class="start-game btn btn-primary btn-large" href="#">Start</a>
+            <a class="start-game btn btn-primary btn-large" href="#">START GAME <i class="icon-play icon-white"></i></a>
         </p>
     </div>
 </div>

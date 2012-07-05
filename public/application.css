@@ -1,0 +1,205 @@
+#main .sidebar {
+  margin-bottom: 0;
+  box-sizing: border-box;
+  height: 100%;
+  border-radius: 0;
+  border-top: none;
+  border-left: none;
+  border-bottom: none;
+  position: relative;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.sidebar > div {
+  display: none;
+}
+.sidebar > div.active {
+  display: block;
+}
+.sidebar header p {
+  margin-bottom: 0;
+}
+.sidebar .actions {
+  border-top: 1px solid #ddd;
+  margin: 0 -19px;
+  padding: 2px 19px 3px;
+  background: #fff;
+/* Old browsers */
+  overflow: hidden;
+}
+.sidebar .actions button {
+  float: right;
+}
+.sidebar > div {
+  margin: 0 -19px;
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+.sidebar > div .scrollable {
+  overflow: auto;
+  position: absolute;
+  top: 32px;
+  bottom: 24px;
+  left: 0;
+  right: 0;
+}
+.sidebar > div hr {
+  border-bottom: 1px solid #ddd;
+}
+.sidebar .game > div {
+  padding: 19px;
+}
+.sidebar .game > div .game-actions {
+  text-align: center;
+}
+.sidebar .game > div .game-actions .btn {
+  margin-bottom: 10px;
+}
+.sidebar .game > div .game-actions .btn i + span {
+  display: inline;
+}
+.sidebar .game > div .game-actions .btn:hover i + span {
+  display: inline;
+}
+.sidebar > div header {
+  border-bottom: 1px solid #ddd;
+  vertical-align: middle;
+  position: relative;
+}
+.sidebar > div header .breadcrumb {
+  border: none;
+  -webkit-border-radius: 0px;
+  border-radius: 0px;
+  margin-bottom: 0;
+  white-space: nowrap;
+}
+.sidebar > div header strong {
+  color: #fff;
+}
+.sidebar > div header button {
+  position: absolute;
+  right: 14px;
+  top: 5px;
+}
+.sidebar table {
+  margin: 0;
+}
+.sidebar table tr th:last-of-type,
+.sidebar table tr td:last-of-type {
+  text-align: right;
+}
+.sidebar table tr td .alert {
+  text-align: center;
+  margin: -8px;
+}
+.sidebar table tr td + td span.label {
+  margin-left: 5px;
+}
+.sidebar table tr td span.user-name {
+  font-size: 10px;
+  margin-top: -3px;
+  position: absolute;
+  color: #000;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+  white-space: nowrap;
+  opacity: 0;
+}
+.sidebar table tr td span.label:hover + span.user-name {
+  opacity: 1;
+}
+.sidebar table tr td {
+  -webkit-transition: all 60ms ease-in;
+  -moz-transition: all 60ms ease-in;
+  -ms-transition: all 60ms ease-in;
+  -o-transition: all 60ms ease-in;
+  transition: all 60ms ease-in;
+}
+.sidebar table tr:hover td {
+  background-color: #d6ceaa;
+  cursor: pointer;
+}
+.sidebar table tr td .icon-share {
+  opacity: 0;
+  -webkit-transition: all 60ms ease-in;
+  -moz-transition: all 60ms ease-in;
+  -ms-transition: all 60ms ease-in;
+  -o-transition: all 60ms ease-in;
+  transition: all 60ms ease-in;
+}
+.sidebar table tr:hover td .icon-share {
+  opacity: 1;
+}
+.sidebar dl dd span.status {
+  float: right;
+}
+.sidebar > footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 24px;
+  line-height: 24px;
+  padding: 0 8px;
+  background: #7d7e7d;
+/* Old browsers */
+  background: -moz-linear-gradient(top, #7d7e7d 0%, #0e0e0e 100%);
+/* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #7d7e7d), color-stop(100%, #0e0e0e));
+/* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #7d7e7d 0%, #0e0e0e 100%);
+/* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #7d7e7d 0%, #0e0e0e 100%);
+/* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #7d7e7d 0%, #0e0e0e 100%);
+/* IE10+ */
+  background: linear-gradient(to bottom, #7d7e7d 0%, #0e0e0e 100%);
+/* W3C */
+  color: #fff;
+  z-index: 2;
+}
+.sidebar > footer  .player-name {
+  border: 1px solid transparent;
+  padding: 0 3px;
+  font-weight: bold;
+  text-decoration: underline;
+  white-space: nowrap;
+}
+.sidebar > footer  .player-name:hover {
+  border-color: #ddd;
+  text-decoration: none;
+}
+.sidebar > footer  .player-name:focus {
+  border-color: #ddd;
+  background: #fff;
+  color: #000;
+}
+@import url("http://fonts.googleapis.com/css?family=DaysOne");
+html {
+  height: 100%;
+}
+body,
+#app,
+#main {
+  height: 100%;
+}
+body > header h1 {
+  position: absolute;
+  top: 0;
+  right: 20px;
+  font-family: 'Days One', sans-serif;
+}
+.modal {
+  top: 0;
+  margin-top: -4px;
+}
+.navbar {
+  margin: 0;
+}
+.container-fluid {
+  padding: 0;
+}
