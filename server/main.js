@@ -1,8 +1,10 @@
 var express = require('express'),
     redis = require('redis'),
     app = express.createServer(),
-    io = require('socket.io').listen(app);
+    io = require('socket.io').listen(app),
+    socketEvents = require('../app/shared/connectionEvents');
 
+console.log(socketEvents.PLAYER_UPDATES);
 app.listen(6080);
 app.use(express.static(__dirname + '/public'));
 /*app.get('/', function (req, res) {
